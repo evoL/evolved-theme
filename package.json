@@ -1,0 +1,21 @@
+{
+  "name": "evolved-theme",
+  "displayName": "evolved theme",
+  "description": "evol's color theme",
+  "version": "0.1.0",
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "evolved light",
+        "uiTheme": "vs",
+        "path": "./themes/evolved-light-color-theme.json"
+      }
+    ]
+  }
+}
