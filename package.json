@@ -19,6 +19,11 @@
         "label": "evolved light",
         "uiTheme": "vs",
         "path": "./themes/evolved-light-color-theme.json"
+      },
+      {
+        "label": "evolved dark",
+        "uiTheme": "vs",
+        "path": "./themes/evolved-dark-color-theme.json"
       }
     ]
   }
