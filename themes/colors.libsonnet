@@ -89,7 +89,7 @@ local makePalette(roles, type='light') = {
       local indices = std.find(tone, huetone.tones);
       assert std.length(indices) == 1 : 'did not find ' + hue.name + '.' + toneOrRole;
 
-      local realShift = if darkShift != null then darkShift else if type == 'dark' then -shift else shift;
+      local realShift = if type != 'dark' then shift else if darkShift != null then darkShift else -shift;
       local index = indices[0] + realShift;
       assert index >= 0 && index < std.length(huetone.tones) : 'color index out of bounds';
 
