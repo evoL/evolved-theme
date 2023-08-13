@@ -9,7 +9,9 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
   colors: {
     // General
     foreground: d.fg.ui,
+    disabledForeground: d.fg.inactive,
     focusBorder: d.outline.active,
+    'icon.foreground': d.fg.ui,
     'progressBar.background': d.fg.accent,
     'selection.background': d.bg.selection,
     'scrollbar.shadow': d.shadow + alpha(12),
