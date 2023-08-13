@@ -1,4 +1,5 @@
 node_modules
 *.vsix
-themes/*.json
-/*.jsonc
+
+# Build outputs
+vscode/*.json

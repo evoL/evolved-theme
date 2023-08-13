@@ -1,6 +1,10 @@
 # evolved theme
 
-My personal color theme based on the colors on https://evolved.systems
+My personal color theme based on the colors on https://evolved.systems.
+
+Supports:
+
+* Visual Studio Code
 
 ![Screenshot of the light theme shown in Visual Studio Code](./screenshots/evolved-light.webp)
 
@@ -10,7 +14,7 @@ My personal color theme based on the colors on https://evolved.systems
 
 Requirements:
 
-* jsonnet
+* [jsonnet](https://jsonnet.org/)
 * Make
 
-Run `make` to build the theme JSON file.
+Run `make` to build the theme JSON files.

@@ -2,6 +2,7 @@
   "name": "evolved-theme",
   "displayName": "evolved theme",
   "description": "evol's color theme",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/evoL/evolved-theme"
@@ -18,12 +19,12 @@
       {
         "label": "evolved light",
         "uiTheme": "vs",
-        "path": "./themes/evolved-light-color-theme.json"
+        "path": "./vscode/evolved-light-color-theme.json"
       },
       {
         "label": "evolved dark",
         "uiTheme": "vs",
-        "path": "./themes/evolved-dark-color-theme.json"
+        "path": "./vscode/evolved-dark-color-theme.json"
       }
     ]
   }
