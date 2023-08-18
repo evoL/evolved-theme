@@ -24,7 +24,7 @@
       },
       {
         "label": "evolved dark",
-        "uiTheme": "vs",
+        "uiTheme": "vs-dark",
         "path": "./vscode/evolved-dark-color-theme.json"
       }
     ]
