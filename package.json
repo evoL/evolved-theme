@@ -4,6 +4,7 @@
   "description": "evol's color theme",
   "publisher": "evolved-systems",
   "license": "MIT",
+  "icon": "./icon.png",
   "repository": {
     "type": "git",
     "url": "https://github.com/evoL/evolved-theme"
