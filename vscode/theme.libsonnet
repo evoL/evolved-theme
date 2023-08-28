@@ -341,6 +341,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
         'support.type.primitive',
         'support.type.builtin',
         'entity.name.type',
+        'entity.other.inherited-class',
       ],
       settings: {
         foreground: d.syntax.type,
