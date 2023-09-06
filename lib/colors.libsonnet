@@ -109,7 +109,7 @@ local makePalette(roles, type='light') = {
       inactive: self.ui,
       statusBar: palette.neutral('background', -1),
       uiInteraction: palette.neutral('background', -1),  // hover/focus
-      elevatedUi: palette.neutral('background', -1),
+      elevatedUi: self.ui,
       selection: palette.accent('background', -1),
       dimSelection: palette.accent('background'),
       control: palette.accent('controlBg'),
