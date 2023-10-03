@@ -184,7 +184,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
     'editorCursor.foreground': d.bg.cursor,
     'editor.selectionBackground': d.bg.selection,
     'editor.inactiveSelectionBackground': d.bg.dimSelection,
-    'editorWhitespace.foreground': d.text.whitespace,
+    'editorWhitespace.foreground': d.text.whitespace + alpha(40),
     'editor.selectionHighlightBackground': d.bg.dimSelection,
     'editor.selectionHighlightBorder': d.outline.active,
     'editor.findMatchBackground': d.bg.findMatch,
