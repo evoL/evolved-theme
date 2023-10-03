@@ -140,6 +140,8 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
     'scrollbarSlider.background': d.bg.scrollbar + alpha(30),
     'scrollbarSlider.hoverBackground': d.bg.scrollbar + alpha(50),
     'scrollbarSlider.activeBackground': d.bg.scrollbar + alpha(60),
+    // Minimap
+    'minimap.selectionHighlight': d.bg.selection,
     // Widgets
     'widget.shadow': d.shadow + alpha(12),
     'editorWidget.background': d.bg.ui,
