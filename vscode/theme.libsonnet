@@ -198,7 +198,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
     'editorLink.activeForeground': d.text.link,
     'editorIndentGuide.activeBackground': d.outline.pronounced,
     'editorIndentGuide.background': d.outline.ui,
-    'editorRuler.foreground': d.outline.ui,
+    'editorRuler.foreground': d.outline.ruler,
     'editorBracketMatch.background': d.bg.bracketMatch,
     'editorBracketMatch.border': d.outline.bracketMatch,
     'editor.foldBackground': d.bg.codeFold + alpha(30),

@@ -201,6 +201,7 @@ local makePalette(roles, type='light') = {
     outline: {
       ui: palette.neutral('background', -1),
       elevatedUi: self.ui,
+      ruler: palette.neutral('foreground', +4),
       pronounced: palette.neutral('foreground', +2),
       active: palette.accent('foreground', +2),
       activeInputOption: self.active,
