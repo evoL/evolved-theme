@@ -209,7 +209,7 @@ local makePalette(roles, type='light') = {
       secondaryControl: palette.neutral('controlBg', -1),
       findMatch: palette.l('background', -2),
       // VSCode-specific
-      bracketMatch: palette.e('background', -3),
+      bracketMatch: palette.e('foreground', +2, 0),
     },
 
     shadow: palette.neutral(10),
@@ -296,6 +296,6 @@ local makePalette(roles, type='light') = {
     },
     fg+: {
       corner: palette.accent(95),
-    }
+    },
   },
 }
