@@ -2,29 +2,29 @@ local huetone = import './huetone.libsonnet';
 
 local lightRoles = {
   default:: {
-    background: 99,
-    foreground: 60,
-    text: 50,
+    background: 980,
+    foreground: 600,
+    text: 500,
     controlBg: self.foreground,
     controlFg: self.background,
   },
   e: self.default,
   v: self.default {
-    foreground: 70,
-    text: 60,
+    foreground: 700,
+    text: 600,
   },
   o: self.default,
   l: self.default {
-    foreground: 70,
-    text: 60,
+    foreground: 700,
+    text: 600,
   },
   pink: self.default {
-    foreground: 70,
-    text: 60,
+    foreground: 700,
+    text: 600,
   },
-  purple: self.default {
-    foreground: 70,
-    text: 60,
+  cyan: self.default {
+    foreground: 700,
+    text: 600,
   },
   neutral: self.default,
 };
@@ -32,29 +32,25 @@ local lightRoles = {
 
 local darkRoles = {
   default:: {
-    background: 10,
-    foreground: 60,
-    text: 70,
+    background: 130,
+    foreground: 600,
+    text: 700,
     controlBg: self.foreground,
     controlFg: self.background,
   },
   e: self.default {
-    foreground: 50,
-    text: 60,
+    foreground: 500,
+    text: 600,
   },
   v: self.default {
-    foreground: 70,
-    text: 80,
-    controlBg: 60,
+    foreground: 700,
+    text: 800,
+    controlBg: 600,
   },
-  o: self.default {
-    background: 15,
-  },
-  l: self.default {
-    background: 15,
-  },
+  o: self.default,
+  l: self.default,
   pink: self.default,
-  purple: self.default,
+  cyan: self.default,
   neutral: self.default,
 };
 
@@ -65,9 +61,8 @@ local roleAliases = {
   red: self.e,
   yellow: self.v,
   green: self.l,
-  cyan: self.pink,  // lol
   blue: self.o,
-  magenta: self.purple,
+  magenta: self.pink,
 
   // Common understanding of colors.
   'error': self.red,
@@ -104,14 +99,14 @@ local makePalette(roles, type='light') = {
     palette:: makePalette(lightRoles, 'light'),
 
     bg: {
-      code: '#ffffff',
+      code: palette.neutral('background', +1, +1),
       ui: palette.neutral('background'),
       inactive: self.ui,
-      statusBar: palette.neutral('background', -1),
+      statusBar: palette.neutral('background'),
       uiInteraction: palette.neutral('background', -1),  // hover/focus
-      elevatedUi: self.ui,
-      selection: palette.accent('background', -1),
-      dimSelection: palette.accent('background'),
+      elevatedUi: palette.neutral('background'),
+      selection: palette.accent('background', -1, +2),
+      dimSelection: palette.accent('background', 0, -1),
       control: palette.accent('controlBg'),
       controlInteraction: palette.accent('controlBg', -1),
       secondaryControl: palette.neutral('controlBg'),
@@ -119,8 +114,8 @@ local makePalette(roles, type='light') = {
       badge: palette.accent('controlBg', -1),
       cursor: palette.accent('foreground'),
       terminal: self.ui,
-      scrollbar: palette.neutral(70),
-      findMatch: palette.l('background', -1),
+      scrollbar: palette.neutral('foreground', +2, +2),
+      findMatch: palette.l('background', -2),
       findMatchHighlight: palette.l('background'),
       codeFold: palette.neutral('background', -2),  // w/ alpha 30%
       'error': palette['error']('background', -2),  // w/ alpha 30%
@@ -128,14 +123,16 @@ local makePalette(roles, type='light') = {
       info: palette.info('background', -2),  // w/ alpha 30%
       // VSCode-specific
       activeInputOption: palette.accent('background', -1),
-      corner: palette.accent(90),
+      corner: palette.accent(850),
+      cornerHover: palette.accent(800),
       debugStatusBar: palette.l('controlBg'),
-      findRangeHighlight: palette.neutral('background', -1),  // w/ alpha 40%
-      rangeHighlight: palette.l('background', -1),  // w/ alpha 40%
-      hoverHighlight: palette.accent('background', -2),  // w/ alpha 40%
-      matchHighlight: palette.v('background', -2),  // w/ alpha 40%
-      wordHighlight: palette.o('background', -3),  // w/ alpha 30%
-      strongWordHighlight: palette.o('background', -4),  // w/ alpha 30%
+      selectionHighlight: palette.accent('background', 0, +2),
+      findRangeHighlight: palette.neutral('background', -2, +1),  // w/ alpha 40%
+      rangeHighlight: palette.l('background', -2, +1),  // w/ alpha 40%
+      hoverHighlight: palette.accent('background', -3, +2),  // w/ alpha 40%
+      matchHighlight: palette.v('background', -3, +2),  // w/ alpha 40%
+      wordHighlight: palette.o('background', -4, +3),  // w/ alpha 30%
+      strongWordHighlight: palette.o('background', -5, +4),  // w/ alpha 30%
       noFolderStatusBar: palette.neutral('background', -2),
       bracketMatch: palette.e('background', -1),
       addedText: palette.green('controlBg'),  // w/ alpha 30%
@@ -173,7 +170,8 @@ local makePalette(roles, type='light') = {
       activeInputOption: palette.accent('foreground', -1),
       debugStatusBar: palette.l('controlFg'),
       noFolderStatusBar: palette.neutral('foreground', -1),
-      corner: palette.accent(60),
+      corner: palette.accent(400),
+      cornerHover: palette.accent(300),
       pickerGroup: palette.neutral('foreground', +2),
     },
 
@@ -191,7 +189,7 @@ local makePalette(roles, type='light') = {
       cursor: palette.accent('background'),
       link: palette.accent('foreground'),
       activeLink: palette.accent('foreground', -1),
-      terminal: palette.neutral('text', -1),
+      terminal: self.ui,
       whitespace: palette.accent('foreground'),  // w/ alpha 40%
       // VSCode specific
       brackets: [palette.v('text'), palette.o('text'), palette.l('text', -1, 0)],
@@ -203,34 +201,36 @@ local makePalette(roles, type='light') = {
       elevatedUi: self.ui,
       ruler: palette.neutral('foreground', +4),
       pronounced: palette.neutral('foreground', +2),
-      active: palette.accent('foreground', +2),
+      active: palette.accent('foreground', +1),
       activeInputOption: self.active,
       control: palette.accent('controlBg', -1),
       secondaryControl: palette.neutral('controlBg', -1),
-      findMatch: palette.l('background', -2),
+      findMatch: palette.l('background', -3),
       // VSCode-specific
+      currentLine: palette.neutral('background', -2),
+      selectionHighlight: palette.accent('background', -4),
       bracketMatch: palette.e('foreground', +2, 0),
     },
 
-    shadow: palette.neutral(10),
+    shadow: palette.neutral(50),
 
     ansi: {
-      black: palette.neutral(5),
-      blue: palette.blue(60),
-      cyan: palette.cyan(70),
-      green: palette.green(70),
-      magenta: palette.magenta(60),
-      red: palette.red(60),
-      white: palette.neutral(80),
-      yellow: palette.yellow(70),
-      brightBlack: palette.neutral(60),
-      brightBlue: palette.blue(70),
-      brightCyan: palette.cyan(80),
-      brightGreen: palette.green(80),
-      brightMagenta: palette.magenta(70),
-      brightRed: palette.red(70),
-      brightWhite: palette.neutral(95),
-      brightYellow: palette.yellow(80),
+      black: palette.neutral(50),
+      blue: palette.blue(600),
+      cyan: palette.cyan(600),
+      green: palette.green(700),
+      magenta: palette.magenta(600),
+      red: palette.red(600),
+      white: palette.neutral(800),
+      yellow: palette.yellow(700),
+      brightBlack: palette.neutral(600),
+      brightBlue: palette.blue(700),
+      brightCyan: palette.cyan(700),
+      brightGreen: palette.green(800),
+      brightMagenta: palette.magenta(700),
+      brightRed: palette.red(700),
+      brightWhite: palette.neutral(950),
+      brightYellow: palette.yellow(800),
     },
 
     vcs: {
@@ -289,13 +289,12 @@ local makePalette(roles, type='light') = {
     palette:: makePalette(darkRoles, 'dark'),
 
     bg+: {
-      code: palette.neutral('background', 0, +1),
-      ui: palette.neutral('background'),
-      elevatedUi: palette.neutral('background', 0, +2),
-      corner: palette.accent(60),
+      corner: palette.accent(600),
+      cornerHover: palette.accent(700),
     },
     fg+: {
-      corner: palette.accent(95),
+      corner: palette.accent(980),
+      cornerHover: palette.accent(1000),
     },
   },
 }
