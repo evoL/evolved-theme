@@ -4,6 +4,19 @@ All notable changes to the "evolved-theme" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.0]
+
+### Changed
+
+- New color palette generated with [evolved palettes](https://evolved.systems/palettes). The new palette allows for more fine-grained contrast control. Changes are mostly around background colors.
+- Tone names have been changed, there are also more of them.
+- Refined some color mappings. Most notably, `elevatedUi` is used more consistently.
+
+### Fixed
+
+- Type names for Protobufs are now correctly marked.
+- The border for matching brackets is now visible in the dark theme.
+
 ## [0.1.2]
 
 ### Added
