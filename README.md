@@ -5,6 +5,7 @@ My personal color theme based on the colors on https://evolved.systems.
 Supports:
 
 * Visual Studio Code
+* iTerm2
 
 ![Screenshot of the light theme shown in Visual Studio Code](./screenshots/evolved-light.webp)
 
@@ -17,4 +18,4 @@ Requirements:
 * [jsonnet](https://jsonnet.org/)
 * Make
 
-Run `make` to build the theme JSON files.
+Run `make` to build the theme files.

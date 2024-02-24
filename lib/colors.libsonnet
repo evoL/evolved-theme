@@ -190,6 +190,7 @@ local makePalette(roles, type='light') = {
       link: palette.accent('foreground'),
       activeLink: palette.accent('foreground', -1),
       terminal: self.ui,
+      terminalBold: palette.neutral('text', -1),
       whitespace: palette.accent('foreground'),  // w/ alpha 40%
       // VSCode specific
       brackets: [palette.v('text'), palette.o('text'), palette.l('text', -1, 0)],

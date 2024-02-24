@@ -1,6 +1,9 @@
-COMMON_SRCS = lib/huetone.libsonnet lib/colors.libsonnet
+COMMON_SRCS = lib/colors.libsonnet lib/huetone.libsonnet
 
-all: vscode/*.json
+%.itermcolors: %.jsonnet ${COMMON_SRCS} iterm2/theme.libsonnet 
+	jsonnet --string --output-file $@ $<
 
-vscode/*.json: $(COMMON_SRCS) vscode/theme.libsonnet vscode/evolved.jsonnet
-	jsonnet --multi vscode vscode/evolved.jsonnet
+vscode/%.json: vscode/evolved.jsonnet $(COMMON_SRCS) vscode/theme.libsonnet 
+	jsonnet --multi vscode $<
+
+all: iterm2/evolved-dark.itermcolors iterm2/evolved-light.itermcolors vscode/evolved-dark-color-theme.json vscode/evolved-light-color-theme.json
