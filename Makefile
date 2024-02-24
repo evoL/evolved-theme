@@ -6,4 +6,5 @@ COMMON_SRCS = lib/colors.libsonnet lib/huetone.libsonnet
 vscode/%-color-theme.json: vscode/%.jsonnet $(COMMON_SRCS) vscode/theme.libsonnet 
 	jsonnet --output-file $@ $<
 
-all: iterm2/evolved-dark.itermcolors iterm2/evolved-light.itermcolors vscode/evolved-dark-color-theme.json vscode/evolved-light-color-theme.json
+all: iterm2/evolved-dark.itermcolors iterm2/evolved-light.itermcolors
+all: vscode/evolved-dark-color-theme.json vscode/evolved-light-color-theme.json
