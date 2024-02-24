@@ -14,8 +14,8 @@ local fromHexColor(hex, alpha=1) = {
   local d = self.defs,
   defs:: error "Missing color definitions in iTerm2 theme",
 
-  "Foreground Color": fromHexColor(d.text.code),
-  "Background Color": fromHexColor(d.bg.code),
+  "Foreground Color": fromHexColor(d.text.terminal),
+  "Background Color": fromHexColor(d.bg.terminal),
   "Bold Color": fromHexColor(d.text.terminalBold),
   "Link Color": fromHexColor(d.text.link),
   "Badge Color": fromHexColor(d.bg.badge),
