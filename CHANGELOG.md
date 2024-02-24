@@ -4,6 +4,16 @@ All notable changes to the "evolved-theme" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.1]
+
+### Added
+
+- An [iTerm2](https://iterm2.com) theme.
+
+### Changed
+
+- Improved contrast for terminal (ANSI) colors.
+
 ## [0.2.0]
 
 ### Changed
