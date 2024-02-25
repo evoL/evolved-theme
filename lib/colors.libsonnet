@@ -211,21 +211,21 @@ local makePalette(roles, type='light') = {
 
     ansi: {
       black: palette.neutral(50),
-      blue: palette.blue(500),
-      cyan: palette.cyan(500),
-      green: palette.green(500),
-      magenta: palette.magenta(500),
-      red: palette.red(500),
+      blue: palette.blue('text'),
+      cyan: palette.cyan('text'),
+      green: palette.green('text'),
+      magenta: palette.magenta('text'),
+      red: palette.red('text'),
       white: palette.neutral(850),
-      yellow: palette.yellow(700),
-      brightBlack: palette.neutral(700),
-      brightBlue: palette.blue(600),
-      brightCyan: palette.cyan(600),
-      brightGreen: palette.green(600),
-      brightMagenta: palette.magenta(600),
-      brightRed: palette.red(600),
+      yellow: palette.yellow('text'),
+      brightBlack: palette.neutral(600),
+      brightBlue: palette.blue('text', +1, +1),
+      brightCyan: palette.cyan('text', +1, +1),
+      brightGreen: palette.green('text', +1, +1),
+      brightMagenta: palette.magenta('text', +1, +1),
+      brightRed: palette.red('text', +1, +1),
       brightWhite: palette.neutral(930),
-      brightYellow: palette.yellow(800),
+      brightYellow: palette.yellow('text', +1, +1),
     },
 
     vcs: {
@@ -290,6 +290,9 @@ local makePalette(roles, type='light') = {
     fg+: {
       corner: palette.accent(980),
       cornerHover: palette.accent(1000),
+    },
+    ansi+: {
+      brightBlack: palette.neutral(400),
     },
   },
 }
