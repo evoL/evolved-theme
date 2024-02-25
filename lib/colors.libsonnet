@@ -99,8 +99,8 @@ local makePalette(roles, type='light') = {
       statusBar: palette.neutral('background'),
       uiInteraction: palette.neutral('background', -1),  // hover/focus
       elevatedUi: palette.neutral('background'),
-      selection: palette.accent('background', -1, +2),
-      dimSelection: palette.accent('background', 0, -1),
+      selection: palette.accent('background', 0, +3),
+      dimSelection: palette.accent('background', +1, +2),
       control: palette.accent('controlBg'),
       controlInteraction: palette.accent('controlBg', -1),
       secondaryControl: palette.neutral('controlBg'),
@@ -120,13 +120,13 @@ local makePalette(roles, type='light') = {
       corner: palette.accent(850),
       cornerHover: palette.accent(800),
       debugStatusBar: palette.l('controlBg'),
-      selectionHighlight: palette.accent('background', 0, +2),
-      findRangeHighlight: palette.neutral('background', -2, +1),  // w/ alpha 40%
-      rangeHighlight: palette.l('background', -2, +1),  // w/ alpha 40%
-      hoverHighlight: palette.accent('background', -3, +2),  // w/ alpha 40%
-      matchHighlight: palette.v('background', -3, +2),  // w/ alpha 40%
-      wordHighlight: palette.o('background', -4, +3),  // w/ alpha 30%
-      strongWordHighlight: palette.o('background', -5, +4),  // w/ alpha 30%
+      selectionHighlight: self.dimSelection,
+      findRangeHighlight: palette.neutral('background', -1, +2),  // w/ alpha 40%
+      rangeHighlight: palette.l('background', -2),  // w/ alpha 40%
+      hoverHighlight: palette.accent('background', -3),  // w/ alpha 40%
+      matchHighlight: palette.v('background', -3),  // w/ alpha 40%
+      wordHighlight: palette.o('background', -4),  // w/ alpha 30%
+      strongWordHighlight: palette.o('background', -5),  // w/ alpha 30%
       noFolderStatusBar: palette.neutral('background', -2),
       bracketMatch: palette.e('background', -1),
       addedText: palette.green('controlBg'),  // w/ alpha 30%
@@ -196,14 +196,14 @@ local makePalette(roles, type='light') = {
       elevatedUi: self.ui,
       ruler: palette.neutral('foreground', +4),
       pronounced: palette.neutral('foreground', +2),
-      active: palette.accent('foreground', +1),
+      active: palette.accent('foreground', +2),
       activeInputOption: self.active,
       control: palette.accent('controlBg', -1),
       secondaryControl: palette.neutral('controlBg', -1),
       findMatch: palette.l('background', -3),
       // VSCode-specific
       currentLine: palette.neutral('background', -2),
-      selectionHighlight: palette.accent('background', -4),
+      selectionHighlight: self.active,
       bracketMatch: palette.e('foreground', +2, 0),
     },
 
