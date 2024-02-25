@@ -2,7 +2,7 @@ local huetone = import './huetone.libsonnet';
 
 local lightRoles = {
   default:: {
-    background: 980,
+    background: 950,
     foreground: 600,
     text: 500,
     controlBg: self.foreground,
@@ -18,14 +18,8 @@ local lightRoles = {
     foreground: 700,
     text: 600,
   },
-  pink: self.default {
-    foreground: 700,
-    text: 600,
-  },
-  cyan: self.default {
-    foreground: 700,
-    text: 600,
-  },
+  pink: self.default,
+  cyan: self.default,
   neutral: self.default,
 };
 
@@ -113,7 +107,7 @@ local makePalette(roles, type='light') = {
       secondaryControlInteraction: palette.neutral('controlBg', -1),
       badge: palette.accent('controlBg', -1),
       cursor: palette.accent('foreground'),
-      terminal: self.ui,
+      terminal: self.code,
       scrollbar: palette.neutral('foreground', +2, +2),
       findMatch: palette.l('background', -2),
       findMatchHighlight: palette.l('background'),
