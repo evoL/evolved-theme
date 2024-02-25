@@ -96,7 +96,6 @@ local makePalette(roles, type='light') = {
       code: palette.neutral('background', +1, +1),
       ui: palette.neutral('background'),
       inactive: self.ui,
-      statusBar: palette.neutral('background'),
       uiInteraction: palette.neutral('background', -1),  // hover/focus
       elevatedUi: palette.neutral('background'),
       selection: palette.accent('background', 0, +3),
@@ -144,7 +143,6 @@ local makePalette(roles, type='light') = {
     fg: {
       code: self.ui,
       ui: palette.neutral('foreground'),
-      statusBar: self.ui,
       uiInteraction: palette.neutral('foreground', -1),  // hover/focus
       elevatedUi: self.ui,
       inactive: palette.neutral('foreground', +2),

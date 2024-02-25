@@ -47,13 +47,18 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
     'listFilterWidget.noMatchesOutline': d.fg['error'],
     'tree.indentGuidesStroke': d.outline.pronounced + alpha(50),
     // Status bar
-    'statusBar.background': d.bg.statusBar,
-    'statusBar.foreground': d.fg.statusBar,
-    'statusBar.border': d.bg.statusBar,
+    'statusBar.background': d.bg.ui,
+    'statusBar.foreground': d.fg.ui,
+    'statusBar.border': d.bg.ui, // no border
     'statusBar.debuggingBackground': d.bg.debugStatusBar,
     'statusBar.debuggingForeground': d.fg.debugStatusBar, 
+    'statusBar.debuggingBorder': d.bg.debugStatusBar, // no border
     'statusBar.noFolderBackground': d.bg.noFolderStatusBar,
     'statusBar.noFolderForeground': d.fg.noFolderStatusBar,
+    'statusBar.noFolderBorder': d.bg.noFolderStatusBar, // no border
+    'statusBarItem.hoverBackground': d.bg.uiInteraction,
+    'statusBarItem.hoverForeground': d.fg.uiInteraction,
+    'statusBarItem.activeBackground': d.bg.selection,
     'statusBarItem.remoteBackground': d.bg.corner,
     'statusBarItem.remoteHoverBackground': d.bg.cornerHover,
     'statusBarItem.remoteForeground': d.fg.corner,
