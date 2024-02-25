@@ -4,6 +4,18 @@ All notable changes to the "evolved-theme" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.2]
+
+### Added
+
+- Hover and active states in the VSCode status bar are now themed.
+
+### Changed
+
+- Made the light theme background one tone darker. 
+- Based terminal (ANSI) colors off text color roles. This allows them to differ between light and dark modes. The only exceptions are white and black, which are adjusted manually.
+- Tweaked various selection colors.
+
 ## [0.2.1]
 
 ### Added
