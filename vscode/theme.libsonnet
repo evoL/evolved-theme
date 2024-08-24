@@ -206,7 +206,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
     'editor.lineHighlightBorder': d.outline.currentLine,
     'editorLink.activeForeground': d.text.link,
     'editorIndentGuide.activeBackground': d.outline.pronounced,
-    'editorIndentGuide.background': d.outline.ui,
+    'editorIndentGuide.background': d.outline.indentGuide,
     'editorRuler.foreground': d.outline.ruler,
     'editorBracketMatch.background': d.bg.bracketMatch,
     'editorBracketMatch.border': d.outline.bracketMatch,

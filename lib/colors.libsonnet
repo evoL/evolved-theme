@@ -110,13 +110,13 @@ local makePalette(roles, type='light') = {
       scrollbar: palette.neutral('foreground', +2, +2),
       findMatch: palette.l('background', -2),
       findMatchHighlight: palette.l('background'),
-      codeFold: palette.neutral('background', -2),  // w/ alpha 30%
       'error': palette['error']('background', -2),  // w/ alpha 30%
       warning: palette.warning('background', -2),  // w/ alpha 30%
       info: palette.info('background', -2),  // w/ alpha 30%
       // VSCode-specific
       activeInputOption: palette.accent('background', -1),
       corner: palette.accent(850),
+      codeFold: palette.neutral('background', -2),  // w/ alpha 30%
       cornerHover: palette.accent(800),
       debugStatusBar: palette.l('controlBg'),
       selectionHighlight: self.dimSelection,
@@ -192,6 +192,7 @@ local makePalette(roles, type='light') = {
     outline: {
       ui: palette.neutral('background', -1),
       elevatedUi: self.ui,
+      indentGuide: palette.neutral('background', 0, +2),
       ruler: palette.neutral('foreground', +4),
       pronounced: palette.neutral('foreground', +2),
       active: palette.accent('foreground', +2),
