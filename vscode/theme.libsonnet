@@ -2,6 +2,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
 
 {
   local d = self.defs,
+  local shadow = d.shadow + alpha(d.shadowAlpha),
   defs:: error 'need to define defs (lol)',
 
   '$schema': 'vscode://schemas/color-theme',
@@ -14,7 +15,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
     'icon.foreground': d.fg.ui,
     'progressBar.background': d.fg.accent,
     'selection.background': d.bg.selection,
-    'scrollbar.shadow': d.shadow + alpha(12),
+    'scrollbar.shadow': shadow,
     // Activity bar
     'activityBar.background': d.bg.ui,
     'activityBar.foreground': d.fg.accent,
@@ -150,7 +151,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
     // Minimap
     'minimap.selectionHighlight': d.bg.selection,
     // Widgets
-    'widget.shadow': d.shadow + alpha(12),
+    'widget.shadow': shadow,
     'editorWidget.background': d.bg.elevatedUi,
     'editorWidget.border': d.outline.elevatedUi,
     'editorWidget.resizeBorder': d.outline.elevatedUi,

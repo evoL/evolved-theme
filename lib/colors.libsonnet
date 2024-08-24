@@ -207,6 +207,7 @@ local makePalette(roles, type='light') = {
     },
 
     shadow: palette.neutral(50),
+    shadowAlpha: 12,
 
     ansi: {
       black: palette.neutral(50),
@@ -293,5 +294,6 @@ local makePalette(roles, type='light') = {
     ansi+: {
       brightBlack: palette.neutral(400),
     },
+    shadowAlpha: 18,
   },
 }
