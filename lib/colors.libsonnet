@@ -138,6 +138,9 @@ local makePalette(roles, type='light') = {
       currentHeader: palette.red('background', -3),  // w/ alpha 30%
       incomingContent: palette.blue('background', -2),  // w/ alpha 30%
       incomingHeader: palette.blue('background', -3),  // w/ alpha 30%
+      // Sublime Text-specific
+      codeFoldMarker: palette.accent('controlBg', 0, +1),
+      currentLine: palette.neutral('background', -2),
     },
 
     fg: {
@@ -165,6 +168,8 @@ local makePalette(roles, type='light') = {
       corner: palette.accent(400),
       cornerHover: palette.accent(300),
       pickerGroup: palette.neutral('foreground', +2),
+      // Sublime Text specific
+      findMatch: palette.l('foreground', +1),
     },
 
     text: {
@@ -174,6 +179,7 @@ local makePalette(roles, type='light') = {
       invalid: palette.pink('text'),
       accent: palette.accent('text'),
       selection: palette.accent('text'),
+      dimSelection: self.selection,
       'error': palette['error']('text'),
       warning: palette.warning('text', +1),
       info: palette.info('text', -1),
@@ -187,6 +193,8 @@ local makePalette(roles, type='light') = {
       // VSCode specific
       brackets: [palette.v('text'), palette.o('text'), palette.l('text', -1, 0)],
       unexpectedBracket: palette['error']('text', -1),
+      // Sublime Text specific
+      findMatch: palette.l('text'),
     },
 
     outline: {
@@ -199,7 +207,7 @@ local makePalette(roles, type='light') = {
       activeInputOption: self.active,
       control: palette.accent('controlBg', -1),
       secondaryControl: palette.neutral('controlBg', -1),
-      findMatch: palette.l('background', -3),
+      findMatch: palette.l('foreground', +2),
       // VSCode-specific
       currentLine: palette.neutral('background', -2),
       selectionHighlight: self.active,
