@@ -19,6 +19,7 @@
       scope: [
         'string',
         'markup.inline.raw.string',
+        'markup.raw.inline.markdown',
       ],
       settings: {
         foreground: d.syntax.string,
@@ -59,8 +60,12 @@
       scope: [
         'constant.language',
         'keyword.control',
+        'keyword.declaration',
+        'keyword.other',
         'storage.type',
         'storage.modifier',
+        'keyword.operator.type.js',
+        'support.function.svelte',  // on: prefix etc
       ],
       settings: {
         foreground: d.syntax.keyword,
@@ -82,6 +87,7 @@
       name: 'Operators',
       scope: [
         'keyword.operator',
+        'storage.modifier.optional.js',
       ],
       settings: {
         foreground: d.syntax.operator,
@@ -90,12 +96,19 @@
     {
       name: 'Types',
       scope: [
-        'support.type.primitive',
+        'support.class',
         'support.type.builtin',
+        'support.type.primitive',
+        'support.type.unknown',
+        'entity.name.class',
+        'entity.name.interface',
+        'entity.name.label',
         'entity.name.type',
         'entity.other.inherited-class',
+        'storage.modifier.array.js',
         'storage.type.protobuf',
         'storage.type.primitive.protobuf',
+        'variable.type',
       ],
       settings: {
         foreground: d.syntax.type,
@@ -104,6 +117,7 @@
     {
       name: 'Variables',
       scope: [
+        'variable.other.constant',
         'variable.other.readwrite',
         'entity.name.variable',
       ],
@@ -116,6 +130,8 @@
       scope: [
         'entity.name.function',
         'meta.function-call.python',
+        'support.function',
+        'variable.function',
       ],
       settings: {
         foreground: d.syntax['function'],
@@ -133,10 +149,22 @@
     {
       name: 'Object properties',
       scope: [
+        'variable.object.property',
         'variable.other.property',
         'meta.attribute.python',
+        'meta.mapping.key',
+        'meta.property.object',
         'entity.name.tag.yaml',
+        'entity.name.function.jsonnet',
+        // # in private fields
+        'punctuation.definition.variable.js', 
+        // JS/TS class and interface fields
+        'meta.class variable.other.readwrite',
+        'meta.interface variable.other.readwrite',
+        // JSON keys
         'support.type.property-name.json',
+        'meta.mapping.key string.quoted',
+        'meta.mapping.key string.quoted punctuation.definition.string',
       ],
       settings: {
         foreground: d.syntax.property,
@@ -156,6 +184,7 @@
     {
       name: 'Enums',
       scope: [
+        'entity.name.enum',
         'entity.name.type.enum',
       ],
       settings: {
@@ -166,6 +195,7 @@
       name: 'Enum members',
       scope: [
         'variable.other.enummember',
+        'meta.enum variable.other.readwrite',
       ],
       settings: {
         foreground: d.syntax.enumMember,
@@ -214,6 +244,7 @@
       scope: [
         'variable.css',
         'variable.argument.css',
+        'variable.other.custom-property.css',
       ],
       settings: {
         foreground: d.syntax.cssVariable,
@@ -253,6 +284,7 @@
       name: 'Heading',
       scope: [
         'markup.heading',
+        'entity.name.section.markdown',
       ],
       settings: {
         foreground: d.syntax.heading,
