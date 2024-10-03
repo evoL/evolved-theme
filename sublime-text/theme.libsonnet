@@ -1,19 +1,10 @@
 local textmate = import '../lib/textmate.libsonnet';
-local utils = import '../lib/utils.libsonnet';
-
-local convertRule(tmRule) = [std.prune({
-  scope: scope,
-  name: tmRule.name + ' ' + scope,
-
-  foreground: std.get(tmRule.settings, 'foreground'),
-  font_style: std.get(tmRule.settings, 'fontStyle'),
-}) for scope in tmRule.scope];
 
 {
   local d = self.defs,
-  local tm = textmate {defs:: d},
-  defs:: error "Missing color definitions in Sublime Text theme",
-  name: error "Sublime Text color schemes need a name",
+  local tm = textmate { defs:: d },
+  defs:: error 'Missing color definitions in Sublime Text theme',
+  name: error 'Sublime Text color schemes need a name',
 
   variables: {
     shadow: 'color(' + d.shadow + ' alpha(' + (d.shadowAlpha * 0.01) + '))',
@@ -23,10 +14,10 @@ local convertRule(tmRule) = [std.prune({
   globals: {
     background: d.bg.code,
     foreground: d.text.code,
-    invisibles: "color(var(whitespace) alpha(0.4))",
+    invisibles: 'color(var(whitespace) alpha(0.4))',
     caret: d.bg.cursor,
     line_highlight: d.bg.currentLine,
-    
+
     // Accents
 
     misspelling: d.text['error'],
@@ -44,7 +35,7 @@ local convertRule(tmRule) = [std.prune({
 
     // Diff
 
-    line_diff_width: "3",
+    line_diff_width: '3',
     line_diff_added: d.vcs.added,
     line_diff_modified: d.vcs.modified,
     line_diff_deleted: d.vcs.deleted,
@@ -75,9 +66,9 @@ local convertRule(tmRule) = [std.prune({
 
     // Brackets
 
-    brackets_options: "underline",
+    brackets_options: 'underline',
     brackets_foreground: d.outline.bracketMatch,
-    bracket_contents_options: "underline",
+    bracket_contents_options: 'underline',
     bracket_contents_foreground: d.outline.bracketMatch,
 
     // Tags
@@ -90,5 +81,11 @@ local convertRule(tmRule) = [std.prune({
     shadow: 'var(shadow)',
   },
 
-  rules: std.flatMap(convertRule, tm.tokens),
+  rules: [std.prune({
+    name: tmRule.name,
+    scope: std.join(', ', tmRule.scope),
+
+    foreground: std.get(tmRule.settings, 'foreground'),
+    font_style: std.get(tmRule.settings, 'fontStyle'),
+  }) for tmRule in tm.tokens],
 }
