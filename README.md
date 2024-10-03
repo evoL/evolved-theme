@@ -4,6 +4,7 @@ My personal color theme based on the colors on https://evolved.systems.
 
 Supports:
 
+* Sublime Text
 * Visual Studio Code
 * iTerm2
 
