@@ -322,6 +322,8 @@
       scope: [
         'string.other.link.title',
         'string.other.link.description',
+        'meta.image.inline.description',
+        'meta.link.inline.description',
       ],
       settings: {
         foreground: d.syntax.linkTitle
@@ -330,6 +332,8 @@
     {
       name: 'Accented link title brackets',
       scope: [
+        'punctuation.definition.link.begin',
+        'punctuation.definition.link.end',
         'punctuation.definition.link.title',
         'punctuation.definition.link.description',
       ],
@@ -350,6 +354,8 @@
       name: 'Accented link URL brackets',
       scope: [
         'punctuation.definition.metadata.markdown',
+        'punctuation.definition.metadata.begin',
+        'punctuation.definition.metadata.end',
       ],
       settings: {
         foreground: d.syntax.linkUrlBrackets,
@@ -359,6 +365,7 @@
       name: 'Fenced code blocks',
       scope: [
         'punctuation.definition.markdown',
+        'punctuation.definition.raw.code-fence',
       ],
       settings: {
         foreground: d.syntax.codeBlock,
@@ -368,6 +375,7 @@
       name: 'Fenced code block language',
       scope: [
         'fenced_code.block.language',
+        'meta.code-fence.definition constant.other.language-name',
       ],
       settings: {
         foreground: d.syntax.codeBlockLanguage,
@@ -377,6 +385,7 @@
       name: 'Lists',
       scope: [
         'punctuation.definition.list.begin',
+        'punctuation.definition.list_item',
       ],
       settings: {
         foreground: d.syntax.listMarker,
