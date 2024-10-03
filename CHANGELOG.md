@@ -4,6 +4,21 @@ All notable changes to the "evolved-theme" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.3]
+
+### Added
+
+- Color scheme for [Sublime Text](https://sublimetext.com).
+
+### Changed
+
+- Refactored TextMate rules out of the VSCode theme. The rules are now shared between VSCode and Sublime Text themes.
+- Shadow color in dark themes is more pronounced.
+
+### Fixed
+
+- Gutter line in dark theme is no longer invisible.
+
 ## [0.2.2]
 
 ### Added
