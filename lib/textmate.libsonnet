@@ -161,10 +161,10 @@
         // JS/TS class and interface fields
         'meta.class variable.other.readwrite',
         'meta.interface variable.other.readwrite',
-        // JSON keys
+        // JSON/YAML keys
         'support.type.property-name.json',
+        'meta.mapping.key string.unquoted',
         'meta.mapping.key string.quoted',
-        'meta.mapping.key string.quoted punctuation.definition.string',
       ],
       settings: {
         foreground: d.syntax.property,
@@ -176,6 +176,8 @@
         'punctuation.separator.key-value',
         'punctuation.separator.dictionary.key-value',
         'keyword.operator.type.annotation.ts',
+        'meta.mapping punctuation.separator.key-value.mapping',
+        'meta.mapping.key string.quoted punctuation.definition.string',
       ],
       settings: {
         foreground: d.syntax.keyValueOperator,
