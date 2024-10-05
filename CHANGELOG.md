@@ -4,6 +4,12 @@ All notable changes to the "evolved-theme" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.4]
+
+### Fixed
+
+- Syntax highlighting for YAML and Markdown in Sublime Text.
+
 ## [0.2.3]
 
 ### Added
