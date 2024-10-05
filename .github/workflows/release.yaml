@@ -32,7 +32,7 @@ jobs:
           args: 'package --out dist'
       - name: Prepare Sublime Text package
         run: |
-          zip "dist/evolved-theme-${TAG_NAME}.sublime-package" sublime-text/*.sublime-color-scheme
+          zip -j "dist/evolved-theme-${TAG_NAME}.sublime-package" sublime-text/*.sublime-color-scheme
 
       # Upload artifacts
       - name: Upload iTerm2 themes
