@@ -4,6 +4,12 @@ All notable changes to the "evolved-theme" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.2.5]
+
+### Added
+
+- Color theme for [Ghostty](https://ghostty.org/).
+
 ## [0.2.4]
 
 ### Fixed
