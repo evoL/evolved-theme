@@ -4,9 +4,11 @@ My personal color theme based on the colors on https://evolved.systems.
 
 Supports:
 
-* Sublime Text
-* Visual Studio Code
-* iTerm2
+* [Ghostty](https://ghostty.org/)
+* [iTerm2](https://iterm2.com/)
+* [Sublime Text](https://www.sublimetext.com/)
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Zed](https://zed.dev/)
 
 ![Screenshot of the light theme shown in Visual Studio Code](./screenshots/evolved-light.webp)
 
