@@ -5,3 +5,4 @@ node_modules
 iterm2/*.itermcolors
 sublime-text/*.sublime-color-scheme
 vscode/*.json
+zed/*.json

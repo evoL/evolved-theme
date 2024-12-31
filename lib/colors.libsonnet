@@ -113,6 +113,7 @@ local makePalette(roles, type='light') = {
       'error': palette['error']('background', -2),  // w/ alpha 30%
       warning: palette.warning('background', -2),  // w/ alpha 30%
       info: palette.info('background', -2),  // w/ alpha 30%
+      ok: palette.ok('background', -2),  // w/ alpha 30%
       // VSCode-specific
       activeInputOption: palette.accent('background', -1),
       corner: palette.accent(850),
@@ -138,15 +139,16 @@ local makePalette(roles, type='light') = {
       currentHeader: palette.red('background', -3),  // w/ alpha 30%
       incomingContent: palette.blue('background', -2),  // w/ alpha 30%
       incomingHeader: palette.blue('background', -3),  // w/ alpha 30%
+      currentLine: palette.neutral('background', -2),
       // Sublime Text-specific
       codeFoldMarker: palette.accent('controlBg', 0, +1),
-      currentLine: palette.neutral('background', -2),
     },
 
     fg: {
       code: self.ui,
       ui: palette.neutral('foreground'),
       uiInteraction: palette.neutral('foreground', -1),  // hover/focus
+      dim: palette.neutral('foreground', +1),
       elevatedUi: self.ui,
       inactive: palette.neutral('foreground', +2),
       accent: palette.accent('foreground'),
@@ -175,6 +177,7 @@ local makePalette(roles, type='light') = {
     text: {
       code: self.ui,
       ui: palette.neutral('text'),
+      dim: palette.neutral('text', +1),
       inactive: palette.neutral('text', +2),
       invalid: palette.pink('text'),
       accent: palette.accent('text'),
