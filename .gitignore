@@ -2,6 +2,8 @@ node_modules
 *.vsix
 
 # Build outputs
+ghostty/evolved-dark
+ghostty/evolved-light
 iterm2/*.itermcolors
 sublime-text/*.sublime-color-scheme
 vscode/*.json
