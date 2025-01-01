@@ -43,19 +43,21 @@ local PlayerDef(paletteFn) = {
     'surface.background': d.bg.ui,
 
     // Other editors don't have a concept of "elements" and "ghost elements",
-    // therefore Zed reaches directly to the palette for those.
+    // where it's only possible to control the background color and not the
+    // foreground. To handle those, the Zed theme reaches directly to the
+    // palette.
 
-    'element.background': d.palette.accent('background', -3),
+    'element.background': d.palette.neutral('background', -2),
     // Also used for hovering stuff in code.
-    'element.hover': d.palette.accent('background', -4),
-    'element.active': d.palette.accent('background', -3),
-    'element.selected': d.palette.accent('background', -4),
+    'element.hover': d.palette.accent('foreground', +4),
+    'element.active': d.palette.accent('foreground', +5),
+    'element.selected': d.palette.accent('foreground', +4),
     'element.disabled': d.bg.inactive,
 
     'ghost_element.background': '#00000000',
-    'ghost_element.hover': d.palette.neutral('foreground', -3) + alpha(8),
-    'ghost_element.active': d.palette.neutral('foreground', -3) + alpha(12),
-    'ghost_element.selected': d.palette.neutral('foreground', -3) + alpha(8),
+    'ghost_element.hover': d.palette.neutral('foreground') + alpha(8),
+    'ghost_element.active': d.palette.neutral('foreground') + alpha(12),
+    'ghost_element.selected': d.palette.neutral('foreground') + alpha(8),
     'ghost_element.disabled': d.bg.inactive,
 
     'drop_target.background': d.bg.selection + alpha(30),
@@ -164,7 +166,8 @@ local PlayerDef(paletteFn) = {
     'ignored.border': null,
 
     info: d.text.info,
-    'info.background': d.bg.info + alpha(30),
+    // Also used for active buttons.
+    'info.background': d.palette.accent('foreground', +2) + alpha(24),
     'info.border': d.fg.info,
 
     modified: d.vcs.modified,
