@@ -86,9 +86,9 @@ local PlayerDef(paletteFn) = {
 
     'pane.focused_border': null,
 
-    'scrollbar.thumb.background': d.bg.scrollbar + alpha(30),
-    'scrollbar.thumb.hover_background': d.bg.scrollbar + alpha(50),
-    'scrollbar.thumb.border': d.outline.ruler,
+    'scrollbar.thumb.background': d.bg.scrollbar + alpha(30),  // alpha unused in sidebar
+    'scrollbar.thumb.hover_background': d.bg.scrollbar + alpha(50),  // unused?
+    'scrollbar.thumb.border': d.outline.pronounced,
     'scrollbar.track.background': d.outline.ruler + alpha(5),
     'scrollbar.track.border': d.outline.ruler,
 
