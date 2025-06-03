@@ -142,6 +142,8 @@ local makePalette(roles, type='light') = {
       incomingHeader: palette.blue('background', -3),  // w/ alpha 30%
       // Sublime Text-specific
       codeFoldMarker: palette.accent('controlBg', 0, +1),
+      // Zed-specific
+      hint: palette.neutral('background'),
     },
 
     fg: {
@@ -215,6 +217,8 @@ local makePalette(roles, type='light') = {
       currentLine: palette.neutral('background', -2),
       selectionHighlight: self.active,
       bracketMatch: palette.e('foreground', +2, 0),
+      // Zed-specific
+      hint: palette.neutral('background', +3),
     },
 
     shadow: palette.neutral(50),

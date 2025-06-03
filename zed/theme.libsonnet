@@ -158,8 +158,8 @@ local PlayerDef(paletteFn) = {
     'hidden.border': null,
 
     hint: d.text.dim,
-    'hint.background': null,
-    'hint.border': null,
+    'hint.background': d.bg.hint,
+    'hint.border': d.bg.hint,
 
     ignored: d.vcs.ignored,
     'ignored.background': null,
