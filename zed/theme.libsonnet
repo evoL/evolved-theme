@@ -137,6 +137,10 @@ local PlayerDef(paletteFn) = {
 
     'link_text.hover': d.text.activeLink,
 
+    'version_control.added': d.vcs.added,
+    'version_control.modified': d.vcs.modified,
+    'version_control.deleted': d.vcs.deleted,
+
     conflict: d.vcs.conflicting,
     'conflict.background': null,
     'conflict.border': null,
