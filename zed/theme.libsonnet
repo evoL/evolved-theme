@@ -3,7 +3,7 @@ local alpha(num) = std.format('%02x', num / 100 * 255);
 local PlayerDef(paletteFn) = {
   cursor: paletteFn('foreground'),
   background: paletteFn('foreground'),
-  selection: paletteFn('background', 0, +3),
+  selection: paletteFn('foreground') + alpha(20),
 };
 
 {
