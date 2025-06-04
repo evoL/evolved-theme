@@ -147,11 +147,11 @@ local PlayerDef(paletteFn) = {
     'conflict.background': null,
     'conflict.border': null,
 
-    created: d.vcs.added,
+    created: d.vcs.added,  // Might be used for added diffs as well.
     'created.background': null,
     'created.border': null,
 
-    deleted: d.vcs.deleted,
+    deleted: d.vcs.deleted, // Might be used for removed diffs as well.
     'deleted.background': null,
     'deleted.border': null,
 
