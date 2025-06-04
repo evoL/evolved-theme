@@ -233,7 +233,7 @@ local makePalette(roles, type='light') = {
       red: palette.red('text'),
       white: palette.neutral(850),
       yellow: palette.yellow('text'),
-      brightBlack: palette.neutral(600),
+      brightBlack: palette.neutral(700),
       brightBlue: palette.blue('text', +1, +1),
       brightCyan: palette.cyan('text', +1, +1),
       brightGreen: palette.green('text', +1, +1),
