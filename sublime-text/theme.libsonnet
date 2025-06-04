@@ -7,6 +7,7 @@ local textmate = import '../lib/textmate.libsonnet';
   name: error 'Sublime Text color schemes need a name',
 
   variables: {
+    indentGuide: d.outline.indentGuide,
     shadow: 'color(' + d.shadow + ' alpha(' + (d.shadowAlpha * 0.01) + '))',
     whitespace: d.text.whitespace,
   },
@@ -61,8 +62,8 @@ local textmate = import '../lib/textmate.libsonnet';
 
     // Guides
 
-    guide: d.outline.indentGuide,
-    active_guide: d.outline.pronounced,
+    guide: 'color(var(indentGuide) alpha(0.3))',
+    active_guide: d.outline.activeIndentGuide,
 
     // Brackets
 

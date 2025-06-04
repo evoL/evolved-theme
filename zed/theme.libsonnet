@@ -101,6 +101,8 @@ local PlayerDef(paletteFn) = {
     'editor.line_number': d.text.inactive,
     'editor.active_line_number': d.text.accent,
     'editor.invisible': d.text.whitespace + alpha(40),
+    'editor.indent_guide': d.outline.indentGuide + alpha(30),
+    'editor.indent_guide_active': d.outline.activeIndentGuide,
     'editor.wrap_guide': d.outline.ruler,
     'editor.active_wrap_guide': d.outline.ruler,  // ?
     'editor.document_highlight.read_background': d.bg.wordHighlight + alpha(30),
