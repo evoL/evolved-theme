@@ -25,6 +25,8 @@ local fromHexColor(hex, alpha=1) = {
   "Cursor Color": fromHexColor(d.bg.cursor),
   "Cursor Text Color": fromHexColor(d.text.cursor),
   "Cursor Guide Color": fromHexColor(d.text.cursor, alpha = 0.25),
+  "Brighten Bold Text": false,
+  "Use Bright Bold" : false,
 
   "Ansi 0 Color": fromHexColor(d.ansi.black),
   "Ansi 1 Color": fromHexColor(d.ansi.red),

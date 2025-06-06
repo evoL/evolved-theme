@@ -8,7 +8,10 @@ local lightRoles = {
     controlBg: self.foreground,
     controlFg: self.background,
   },
-  e: self.default,
+  e: self.default {
+    foreground: 700,
+    text: 600,
+  },
   v: self.default {
     foreground: 700,
     text: 600,
@@ -19,7 +22,10 @@ local lightRoles = {
     text: 600,
   },
   pink: self.default,
-  cyan: self.default,
+  cyan: self.default {
+    foreground: 700,
+    text: 600,
+  },
   neutral: self.default,
 };
 
@@ -197,7 +203,7 @@ local makePalette(roles, type='light') = {
       whitespace: palette.accent('foreground'),  // w/ alpha 40%
       // VSCode specific
       brackets: [palette.v('text'), palette.o('text'), palette.l('text', -1, 0)],
-      unexpectedBracket: palette['error']('text', -1),
+      unexpectedBracket: palette['error']('text', -2),
       // Sublime Text specific
       findMatch: palette.l('text'),
     },
@@ -217,7 +223,7 @@ local makePalette(roles, type='light') = {
       // VSCode-specific
       currentLine: palette.neutral('background', -2),
       selectionHighlight: self.active,
-      bracketMatch: palette.e('foreground', +2, 0),
+      bracketMatch: palette.e('foreground', +1, 0),
       // Zed-specific
       hint: palette.neutral('background', +3),
     },
@@ -261,7 +267,7 @@ local makePalette(roles, type='light') = {
       string: palette.l('text', +1, 0),
       specialStringPart: palette.l('text', 0, -1),
       stringQuote: palette.l('text', 0, -1),
-      keyword: palette.e('text', +2, 0),
+      keyword: palette.e('text', +1, 0),
       this: palette.pink('text', +1, +1),
       operator: palette.l('text'),
       type: palette.v('text'),
@@ -272,7 +278,7 @@ local makePalette(roles, type='light') = {
       keyValueOperator: palette.o('text', -2, 0),
       enum: self.type,
       enumMember: palette.v('text', -2, -2),
-      annotation: palette.e('text', +1, +1),
+      annotation: palette.e('text', 0, +1),
 
       tag: palette.o('text'),
       tagBrackets: palette.o('text', -1, -1),
@@ -290,8 +296,8 @@ local makePalette(roles, type='light') = {
       linkUrlBrackets: palette.accent('text', -1),
       codeBlock: palette.l('text'),
       codeBlockLanguage: palette.l('text', -1),
-      listMarker: palette.e('foreground', +1, 0),
-      svelteBlock: palette.e('text', +1, +1),
+      listMarker: palette.e('foreground'),
+      svelteBlock: palette.e('text', 0, +1),
     },
   },
 
