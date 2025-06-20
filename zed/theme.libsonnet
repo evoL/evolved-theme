@@ -139,21 +139,22 @@ local PlayerDef(paletteFn) = {
 
     'link_text.hover': d.text.activeLink,
 
-    'version_control.added': d.vcs.added,
-    'version_control.modified': d.vcs.modified,
-    'version_control.deleted': d.vcs.deleted,
+    // Used for gutter and background (with added alpha).
+    'version_control.added': d.fg.added,
+    'version_control.modified': d.fg.modified,
+    'version_control.deleted': d.fg.deleted,
 
-    conflict: d.vcs.conflicting,
-    'conflict.background': null,
-    'conflict.border': null,
+    conflict: d.fg.conflicting,
+    'conflict.background': d.bg.conflicting,
+    'conflict.border': d.outline.conflicting,
 
-    created: d.vcs.added,  // Might be used for added diffs as well.
-    'created.background': null,
-    'created.border': null,
+    created: d.fg.added,
+    'created.background': d.bg.added,
+    'created.border': d.outline.added,
 
-    deleted: d.vcs.deleted, // Might be used for removed diffs as well.
-    'deleted.background': null,
-    'deleted.border': null,
+    deleted: d.fg.deleted,
+    'deleted.background': d.bg.deleted,
+    'deleted.border': d.outline.deleted,
 
     'error': d.fg['error'],
     'error.background': d.bg['error'],
@@ -167,26 +168,26 @@ local PlayerDef(paletteFn) = {
     'hint.background': d.bg.hint,
     'hint.border': d.bg.hint,
 
-    ignored: d.vcs.ignored,
-    'ignored.background': null,
-    'ignored.border': null,
+    ignored: d.fg.ignored,
+    'ignored.background': d.bg.ignored,
+    'ignored.border': d.outline.ignored,
 
     info: d.text.info,
     // Also used for active buttons.
     'info.background': d.palette.accent('foreground', +2) + alpha(24),
     'info.border': d.fg.info,
 
-    modified: d.vcs.modified,
-    'modified.background': null,
-    'modified.border': null,
+    modified: d.fg.modified,
+    'modified.background': d.bg.modified,
+    'modified.border': d.outline.modified,
 
     predictive: d.text.accent,
     'predictive.background': null,
     'predictive.border': null,
 
-    renamed: d.vcs.renamed,
-    'renamed.background': null,
-    'renamed.border': null,
+    renamed: d.fg.renamed,
+    'renamed.background': d.bg.renamed,
+    'renamed.border': d.outline.renamed,
 
     success: d.text.ok,
     'success.background': d.bg.ok + alpha(30),

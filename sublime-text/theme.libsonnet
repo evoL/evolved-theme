@@ -37,9 +37,9 @@ local textmate = import '../lib/textmate.libsonnet';
     // Diff
 
     line_diff_width: '3',
-    line_diff_added: d.vcs.added,
-    line_diff_modified: d.vcs.modified,
-    line_diff_deleted: d.vcs.deleted,
+    line_diff_added: d.fg.added,
+    line_diff_modified: d.fg.modified,
+    line_diff_deleted: d.fg.deleted,
 
     // Selection
 

@@ -121,6 +121,15 @@ local makePalette(roles, type='light') = {
       info: palette.info('background', -2),  // w/ alpha 30%
       ok: palette.ok('background', -2),  // w/ alpha 30%
       currentLine: palette.neutral('background', -1, +2),
+      // Version control
+      added: palette.green('background', +1),
+      conflicting: palette.pink('background', +1),
+      deleted: palette.red('background', +1),
+      ignored: palette.neutral('background', -1),
+      modified: palette.blue('background', +1),
+      renamed: palette.yellow('background', +1),
+      submodule: palette.pink('background', +1),
+      untracked: palette.neutral('background'),
       // VSCode-specific
       activeInputOption: palette.accent('background', -1),
       corner: palette.accent(850),
@@ -171,6 +180,15 @@ local makePalette(roles, type='light') = {
       secondaryControl: palette.neutral('controlFg'),
       secondaryControlInteraction: self.secondaryControl,
       badge: palette.accent('controlFg'),
+      // Version control
+      added: palette.green('foreground'),
+      conflicting: palette.pink('foreground'),
+      deleted: palette.red('foreground'),
+      ignored: palette.neutral('foreground', +2),
+      modified: palette.blue('foreground'),
+      renamed: palette.yellow('foreground'),
+      submodule: palette.pink('foreground'),
+      untracked: palette.neutral('foreground', +1),
       // VSCode-specific
       activeInputOption: palette.accent('foreground', -1),
       debugStatusBar: palette.l('controlFg'),
@@ -201,6 +219,15 @@ local makePalette(roles, type='light') = {
       terminal: self.ui,
       terminalBold: palette.neutral('text', -1),
       whitespace: palette.accent('foreground'),  // w/ alpha 40%
+      // Version control
+      added: palette.green('text'),
+      conflicting: palette.pink('text'),
+      deleted: palette.red('text'),
+      ignored: palette.neutral('text', +2),
+      modified: palette.blue('text'),
+      renamed: palette.yellow('text'),
+      submodule: palette.pink('text'),
+      untracked: palette.neutral('text', +1),
       // VSCode specific
       brackets: [palette.v('text'), palette.o('text'), palette.l('text', -1, 0)],
       unexpectedBracket: palette['error']('text', -2),
@@ -220,6 +247,15 @@ local makePalette(roles, type='light') = {
       control: palette.accent('controlBg', -1),
       secondaryControl: palette.neutral('controlBg', -1),
       findMatch: palette.l('foreground', +2),
+      // Version control
+      added: palette.green('foreground'),
+      conflicting: palette.pink('foreground'),
+      deleted: palette.red('foreground'),
+      ignored: palette.neutral('foreground', +2),
+      modified: palette.blue('foreground'),
+      renamed: palette.yellow('foreground'),
+      submodule: palette.pink('foreground'),
+      untracked: palette.neutral('foreground', +1),
       // VSCode-specific
       currentLine: palette.neutral('background', -2),
       selectionHighlight: self.active,
@@ -248,17 +284,6 @@ local makePalette(roles, type='light') = {
       brightRed: palette.red('text', +1, +1),
       brightWhite: palette.neutral(930),
       brightYellow: palette.yellow('text', +1, +1),
-    },
-
-    vcs: {
-      added: palette.green('foreground'),
-      conflicting: palette.pink('foreground'),
-      deleted: palette.red('foreground'),
-      ignored: palette.neutral('foreground', +2),
-      modified: palette.blue('foreground'),
-      renamed: palette.yellow('foreground'),
-      submodule: palette.pink('foreground'),
-      untracked: palette.neutral('foreground', +1),
     },
 
     syntax: {
