@@ -97,7 +97,7 @@ local PlayerDef(paletteFn) = {
     'editor.gutter.background': d.bg.code,
     'editor.subheader.background': d.bg.code,
     'editor.active_line.background': d.bg.currentLine,
-    'editor.highlighted_line.background': '#ff00ff',  // todo
+    'editor.highlighted_line.background': d.bg.currentLine,
     'editor.line_number': d.text.inactive,
     'editor.active_line_number': d.text.accent,
     'editor.invisible': d.text.whitespace + alpha(40),
@@ -161,8 +161,8 @@ local PlayerDef(paletteFn) = {
     'error.border': d.fg['error'],
 
     hidden: d.text.inactive,
-    'hidden.background': null,
-    'hidden.border': null,
+    'hidden.background': d.bg.inactive,
+    'hidden.border': d.outline.inactive,
 
     hint: d.text.dim,
     'hint.background': d.bg.hint,
@@ -181,9 +181,9 @@ local PlayerDef(paletteFn) = {
     'modified.background': d.bg.modified,
     'modified.border': d.outline.modified,
 
-    predictive: d.text.accent,
-    'predictive.background': null,
-    'predictive.border': null,
+    predictive: d.text.predictive,
+    'predictive.background': d.bg.predictive,
+    'predictive.border': d.outline.predictive,
 
     renamed: d.fg.renamed,
     'renamed.background': d.bg.renamed,
@@ -194,8 +194,8 @@ local PlayerDef(paletteFn) = {
     'success.border': d.fg.ok,
 
     unreachable: d.text.inactive,
-    'unreachable.background': null,
-    'unreachable.border': null,
+    'unreachable.background': d.bg.inactive,
+    'unreachable.border': d.outline.inactive,
 
     warning: d.text.warning,
     'warning.background': d.bg.warning + alpha(30),
@@ -233,25 +233,25 @@ local PlayerDef(paletteFn) = {
       constant: SyntaxDef { color: d.syntax.localVariable },
       constructor: SyntaxDef { color: d.syntax['function'] },
       embedded: SyntaxDef { color: d.syntax.codeBlock },
-      emphasis: SyntaxDef { font_style: 'italic' },
-      'emphasis.strong': SyntaxDef { font_weight: 700 },
+      emphasis: SyntaxDef { color: d.text.code, font_style: 'italic' },
+      'emphasis.strong': SyntaxDef { color: d.text.code, font_weight: 700 },
       enum: SyntaxDef { color: d.syntax.enum },
       field: SyntaxDef { color: d.syntax.property },
       'function': SyntaxDef { color: d.syntax['function'] },
-      // hint: SyntaxDef {}  // todo
+      hint: SyntaxDef { color: d.text.hint, },
       keyword: SyntaxDef { color: d.syntax.keyword },
       label: SyntaxDef { color: d.syntax.type },
       link_text: SyntaxDef { color: d.syntax.linkTitle },
       link_uri: SyntaxDef { color: d.syntax.linkUrl },
       number: SyntaxDef { color: d.syntax.number },
       operator: SyntaxDef { color: d.syntax.operator },
-      // predictive: SyntaxDef {}  // todo
+      predictive: SyntaxDef { color: d.text.predictive, },
       preproc: SyntaxDef { color: d.syntax.keyword },
-      // primary: SyntaxDef {}  // todo
+      primary: SyntaxDef { color: d.text.code },
       property: SyntaxDef { color: d.syntax.property },
-      punctuation: SyntaxDef {},
-      'punctuation.bracket': SyntaxDef {},
-      'punctuation.delimiter': SyntaxDef {},
+      punctuation: SyntaxDef { color: d.text.code },
+      'punctuation.bracket': SyntaxDef { color: d.text.code },
+      'punctuation.delimiter': SyntaxDef { color: d.text.code },
       'punctuation.list_marker': SyntaxDef { color: d.syntax.listMarker },
       'punctuation.special': SyntaxDef { color: d.syntax.specialStringPart },
       string: SyntaxDef { color: d.syntax.string },
@@ -259,11 +259,11 @@ local PlayerDef(paletteFn) = {
       'string.regex': SyntaxDef { color: d.syntax.string },
       'string.special.key': SyntaxDef { color: d.syntax.property },
       tag: SyntaxDef { color: d.syntax.tag },
-      'text.literal': SyntaxDef {},
+      'text.literal': SyntaxDef { color: d.text.code },
       title: SyntaxDef { color: d.syntax.heading },
       type: SyntaxDef { color: d.syntax.type },
       variable: SyntaxDef { color: d.syntax.localVariable },
-      // variant: SyntaxDef {}, // todo
+      variant: SyntaxDef { color: d.text.accent },
     },
   },
 }

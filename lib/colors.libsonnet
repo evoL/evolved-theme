@@ -159,6 +159,7 @@ local makePalette(roles, type='light') = {
       codeFoldMarker: palette.accent('controlBg', 0, +1),
       // Zed-specific
       hint: palette.neutral('background'),
+      predictive: palette.cyan('background'),
     },
 
     fg: {
@@ -198,6 +199,9 @@ local makePalette(roles, type='light') = {
       pickerGroup: palette.neutral('foreground', +2),
       // Sublime Text specific
       findMatch: palette.l('foreground', +1),
+      // Zed-specific
+      hint: self.ui,
+      predictive: palette.cyan('foreground'),
     },
 
     text: {
@@ -233,6 +237,9 @@ local makePalette(roles, type='light') = {
       unexpectedBracket: palette['error']('text', -2),
       // Sublime Text specific
       findMatch: palette.l('text'),
+      // Zed-specific
+      hint: self.ui,
+      predictive: palette.cyan('text'),
     },
 
     outline: {
@@ -244,6 +251,7 @@ local makePalette(roles, type='light') = {
       ruler: palette.neutral('foreground', +4),
       active: palette.accent('foreground', +2),
       activeInputOption: self.active,
+      inactive: palette.neutral('foreground', +3),
       control: palette.accent('controlBg', -1),
       secondaryControl: palette.neutral('controlBg', -1),
       findMatch: palette.l('foreground', +2),
@@ -262,6 +270,7 @@ local makePalette(roles, type='light') = {
       bracketMatch: palette.e('foreground', +1, 0),
       // Zed-specific
       hint: palette.neutral('background', +3),
+      predictive: palette.cyan('foreground'),
     },
 
     shadow: palette.neutral(50),
