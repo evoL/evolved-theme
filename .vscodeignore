@@ -1,4 +1,10 @@
 .vscode/**
 .vscode-test/**
 .gitignore
+**/*.libsonnet
+**/*.jsonnet
+ghostty/
+iterm2/
+sublime-text/
+zed/
 vsc-extension-quickstart.md

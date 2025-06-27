@@ -10,9 +10,13 @@ Supports:
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Zed](https://zed.dev/)
 
-![Screenshot of the light theme shown in Visual Studio Code](./screenshots/evolved-light.webp)
+## Screenshots
 
-![Screenshot of the dark theme shown in Visual Studio Code](./screenshots/evolved-dark.webp)
+Find all screenshots in the [screenshots](./screenshots) directory.
+
+![Light theme shown in Visual Studio Code](./screenshots/vscode-light.webp)
+
+![Dark theme shown in Visual Studio Code](./screenshots/vscode-dark.webp)
 
 ## Build
 

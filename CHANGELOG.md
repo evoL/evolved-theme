@@ -4,6 +4,27 @@ All notable changes to the "evolved-theme" extension will be documented in this 
 
 Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
 
+## [0.3.0]
+
+### Added
+
+- Color theme for [Zed](https://zed.dev/).
+- Combined light and dark color theme for iTerm2.
+- Added background and text colors for VCS-related colors (e.g. added, removed, modified)
+- Build outputs are now published in the repository in the `dist/` directory.
+
+### Changed
+
+- **Major change:** Changed the neutral color palette to be less saturated.
+- Tweaked the current line color in light themes.
+- Changed ANSI bright black color to be brighter in light themes.
+- Changed ANSI red and cyan colors to be brighter in light themes.
+
+### Fixed
+
+- Improved colors for indent guides.
+
+
 ## [0.2.5]
 
 ### Added
@@ -39,7 +60,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ### Changed
 
-- Made the light theme background one tone darker. 
+- Made the light theme background one tone darker.
 - Based terminal (ANSI) colors off text color roles. This allows them to differ between light and dark modes. The only exceptions are white and black, which are adjusted manually.
 - Tweaked various selection colors.
 
