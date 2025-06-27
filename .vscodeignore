@@ -1,10 +1,17 @@
 .vscode/**
 .vscode-test/**
+.idx/
 .gitignore
+Makefile
 **/*.libsonnet
 **/*.jsonnet
+screenshots/*
+!screenshots/vscode-*
+dist/**
+!dist/vscode/
 ghostty/
 iterm2/
 sublime-text/
+scripts/
 zed/
 vsc-extension-quickstart.md
