@@ -1,0 +1,229 @@
+{
+   "globals": {
+      "accent": "#e9a332",
+      "active_guide": "#5a5d58",
+      "background": "#2a2923",
+      "bracket_contents_foreground": "#ab5c56",
+      "bracket_contents_options": "underline",
+      "brackets_foreground": "#ab5c56",
+      "brackets_options": "underline",
+      "caret": "#e9a332",
+      "find_highlight": "#2b3d1a",
+      "find_highlight_foreground": "#9fbf83",
+      "fold_marker": "#e9a332",
+      "foreground": "#aab6b2",
+      "guide": "color(var(indentGuide) alpha(0.3))",
+      "gutter_foreground": "#737873",
+      "gutter_foreground_highlight": "#ffb843",
+      "highlight": "#4d643a",
+      "inactive_selection": "#522d00",
+      "inactive_selection_foreground": "#ffb843",
+      "invisibles": "color(var(whitespace) alpha(0.4))",
+      "line_diff_added": "#84a16b",
+      "line_diff_deleted": "#ab5c56",
+      "line_diff_modified": "#36a0da",
+      "line_diff_width": "3",
+      "line_highlight": "#373731",
+      "minimap_border": "#2a2923",
+      "misspelling": "#c3827d",
+      "rulers": "#373731",
+      "scroll_selected_highlight": "#668050",
+      "selection": "#683c00",
+      "selection_border": "#9e6a12",
+      "selection_foreground": "#ffb843",
+      "shadow": "var(shadow)",
+      "tags_foreground": "#58befa",
+      "tags_options": "underline"
+   },
+   "name": "evolved dark",
+   "rules": [
+      {
+         "font_style": "italic",
+         "foreground": "#5a5d58",
+         "name": "Comment",
+         "scope": "comment"
+      },
+      {
+         "foreground": "#9fbf83",
+         "name": "String",
+         "scope": "string, markup.inline.raw.string, markup.raw.inline.markdown"
+      },
+      {
+         "foreground": "#84a16b",
+         "name": "String interpolation and other fancy stuff in literals",
+         "scope": "punctuation.definition.template-expression, constant.character.escape, string.interpolated.expression"
+      },
+      {
+         "foreground": "#84a16b",
+         "name": "Accented string quotes",
+         "scope": "punctuation.definition.string, punctuation.definition.raw"
+      },
+      {
+         "foreground": "#58befa",
+         "name": "Number",
+         "scope": "constant.numeric"
+      },
+      {
+         "foreground": "#c3827d",
+         "name": "Keywords",
+         "scope": "constant.language, keyword.control, keyword.declaration, keyword.other, storage.type, storage.modifier, keyword.operator.type.js, support.function.svelte"
+      },
+      {
+         "font_style": "italic",
+         "foreground": "#ffa3ca",
+         "name": "this",
+         "scope": "variable.language.this, variable.language.special.self, variable.parameter.function.language.special.self"
+      },
+      {
+         "foreground": "#9fbf83",
+         "name": "Operators",
+         "scope": "keyword.operator, storage.modifier.optional.js"
+      },
+      {
+         "foreground": "#ffb843",
+         "name": "Types",
+         "scope": "support.class, support.type.builtin, support.type.primitive, support.type.unknown, entity.name.class, entity.name.interface, entity.name.label, entity.name.type, entity.other.inherited-class, storage.modifier.array.js, storage.type.protobuf, storage.type.primitive.protobuf, variable.type"
+      },
+      {
+         "foreground": "#aab6b2",
+         "name": "Variables",
+         "scope": "variable.other.constant, variable.other.readwrite, entity.name.variable"
+      },
+      {
+         "foreground": "#36a0da",
+         "name": "Functions",
+         "scope": "entity.name.function, meta.function-call.python, support.function, variable.function"
+      },
+      {
+         "foreground": "#c58823",
+         "name": "Function parameters",
+         "scope": "variable.parameter"
+      },
+      {
+         "foreground": "#267fae",
+         "name": "Object properties",
+         "scope": "variable.object.property, variable.other.property, meta.attribute.python, meta.mapping.key, meta.property.object, entity.name.tag.yaml, entity.name.function.jsonnet, punctuation.definition.variable.js, meta.class variable.other.readwrite, meta.interface variable.other.readwrite, support.type.property-name.json, meta.mapping.key string.unquoted, meta.mapping.key string.quoted"
+      },
+      {
+         "foreground": "#58befa",
+         "name": "Accented key-value operator",
+         "scope": "punctuation.separator.key-value, punctuation.separator.dictionary.key-value, keyword.operator.type.annotation.ts, meta.mapping punctuation.separator.key-value.mapping, meta.mapping.key string.quoted punctuation.definition.string"
+      },
+      {
+         "foreground": "#ffb843",
+         "name": "Enums",
+         "scope": "entity.name.enum, entity.name.type.enum"
+      },
+      {
+         "foreground": "#c58823",
+         "name": "Enum members",
+         "scope": "variable.other.enummember, meta.enum variable.other.readwrite"
+      },
+      {
+         "foreground": "#58befa",
+         "name": "Tags",
+         "scope": "entity.name.tag"
+      },
+      {
+         "foreground": "#36a0da",
+         "name": "Tag beginning/end",
+         "scope": "punctuation.definition.tag"
+      },
+      {
+         "foreground": "#9fbf83",
+         "name": "Attribute name",
+         "scope": "entity.other.attribute-name"
+      },
+      {
+         "foreground": "#84a16b",
+         "name": "Attribute =",
+         "scope": "punctuation.separator.key-value"
+      },
+      {
+         "font_style": "italic",
+         "foreground": "#267fae",
+         "name": "Variables",
+         "scope": "variable.css, variable.argument.css, variable.other.custom-property.css"
+      },
+      {
+         "foreground": "#909894",
+         "name": "Property values",
+         "scope": "meta.property-value.css"
+      },
+      {
+         "foreground": "#84a16b",
+         "name": "Namespace",
+         "scope": "entity.other.attribute-name.namespace"
+      },
+      {
+         "foreground": "#668050",
+         "name": "Namespace separator (colon)",
+         "scope": "punctuation.separator.namespace"
+      },
+      {
+         "foreground": "#36a0da",
+         "name": "Heading",
+         "scope": "markup.heading, entity.name.section.markdown"
+      },
+      {
+         "foreground": "#58befa",
+         "name": "Accented heading marker",
+         "scope": "punctuation.definition.heading"
+      },
+      {
+         "font_style": "bold",
+         "name": "Bold",
+         "scope": "markup.bold"
+      },
+      {
+         "font_style": "italic",
+         "name": "Italic",
+         "scope": "markup.italic"
+      },
+      {
+         "foreground": "#e9a332",
+         "name": "Link title",
+         "scope": "string.other.link.title, string.other.link.description, meta.image.inline.description, meta.link.inline.description"
+      },
+      {
+         "foreground": "#ffb843",
+         "name": "Accented link title brackets",
+         "scope": "punctuation.definition.link.begin, punctuation.definition.link.end, punctuation.definition.link.title, punctuation.definition.link.description"
+      },
+      {
+         "foreground": "#ffb843",
+         "name": "Link URL",
+         "scope": "markup.underline.link"
+      },
+      {
+         "foreground": "#ffca69",
+         "name": "Accented link URL brackets",
+         "scope": "punctuation.definition.metadata.markdown, punctuation.definition.metadata.begin, punctuation.definition.metadata.end"
+      },
+      {
+         "foreground": "#9fbf83",
+         "name": "Fenced code blocks",
+         "scope": "punctuation.definition.markdown, punctuation.definition.raw.code-fence"
+      },
+      {
+         "foreground": "#b3d597",
+         "name": "Fenced code block language",
+         "scope": "fenced_code.block.language, meta.code-fence.definition constant.other.language-name"
+      },
+      {
+         "foreground": "#ab5c56",
+         "name": "Lists",
+         "scope": "punctuation.definition.list.begin, punctuation.definition.list_item"
+      },
+      {
+         "foreground": "#d7a4a0",
+         "name": "Blocks",
+         "scope": "punctuation.definition.keyword, punctuation.definition.block.begin.svelte, punctuation.definition.block.end.svelte"
+      }
+   ],
+   "variables": {
+      "indentGuide": "#5a5d58",
+      "shadow": "color(#070502 alpha(0.17999999999999999))",
+      "whitespace": "#e9a332"
+   }
+}
