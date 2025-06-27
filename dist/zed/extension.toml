@@ -1,0 +1,7 @@
+id = "evolved-theme"
+name = "evolved theme"
+description = "evol's personal color theme based on the colors on evolved.systems."
+version = "0.3.0"
+schema_version = 1
+authors = ["Rafał Hirsch <rafal@evolved.systems>"]
+repository = "https://github.com/evoL/evolved-theme"
