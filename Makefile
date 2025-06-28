@@ -1,3 +1,7 @@
+.PHONY: release
+
+# Regular build
+
 COMMON_SRCS = lib/colors.libsonnet lib/huetone.libsonnet
 
 dist/iterm2/%.itermcolors: iterm2/%.jsonnet ${COMMON_SRCS} iterm2/combined-theme.libsonnet iterm2/theme.libsonnet
@@ -23,3 +27,22 @@ all: dist/zed/themes/evolved.json
 
 dist/iterm2/evolved-dynamic.json: iterm2/dynamic-profile.jsonnet ${COMMON_SRCS} iterm2/combined-theme.libsonnet iterm2/theme.libsonnet
 	jsonnet --output-file $@ $<
+
+# Release assets
+
+release: dist/ghostty.zip dist/iterm2.zip dist/evolved-theme.sublime-package dist/evolved-theme.vsix dist/zed.zip
+
+dist/ghostty.zip: dist/ghostty/evolved-dark dist/ghostty/evolved-light
+	zip -j $@ $^
+
+dist/iterm2.zip: dist/iterm2/evolved.itermcolors dist/iterm2/evolved-dark.itermcolors dist/iterm2/evolved-light.itermcolors dist/iterm2/evolved-dynamic.json
+	zip -j $@ $^
+
+dist/evolved-theme.sublime-package: dist/sublime-text/evolved-dark.sublime-color-scheme dist/sublime-text/evolved-light.sublime-color-scheme
+	zip -j $@ $^
+
+dist/evolved-theme.vsix: dist/vscode/evolved-dark-color-theme.json dist/vscode/evolved-light-color-theme.json
+	vsce package --out $@
+
+dist/zed.zip: dist/zed/themes/evolved.json
+	cd dist/zed && zip -r ../zed.zip .
