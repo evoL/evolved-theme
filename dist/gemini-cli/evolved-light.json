@@ -1,0 +1,36 @@
+{
+   "background": {
+      "diff": {
+         "added": "#b3d597",
+         "removed": "#e5bdbb"
+      },
+      "primary": "#ecfefc"
+   },
+   "border": {
+      "default": "#dff1ee",
+      "focused": "#ffca69"
+   },
+   "name": "evolved light",
+   "status": {
+      "error": "#d7a4a0",
+      "success": "#9fbf83",
+      "warning": "#e9a332"
+   },
+   "text": {
+      "accent": "#c58823",
+      "link": "#e9a332",
+      "primary": "#737873",
+      "secondary": "#909894"
+   },
+   "type": "custom",
+   "ui": {
+      "comment": "#aab6b2",
+      "gradient": [
+         "#ab5c56",
+         "#9e6a12",
+         "#267fae",
+         "#668050"
+      ],
+      "symbol": "#84a16b"
+   }
+}

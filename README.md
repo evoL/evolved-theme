@@ -4,6 +4,7 @@ My personal color theme based on the colors on https://evolved.systems.
 
 Supports:
 
+* [Gemini CLI](https://geminicli.com/)
 * [Ghostty](https://ghostty.org/)
 * [iTerm2](https://iterm2.com/)
 * [Sublime Text](https://www.sublimetext.com/)

@@ -19,11 +19,15 @@ dist/vscode/%-color-theme.json: vscode/%.jsonnet $(COMMON_SRCS) lib/textmate.lib
 dist/zed/themes/%.json: zed/%.jsonnet $(COMMON_SRCS) lib/textmate.libsonnet zed/theme.libsonnet
 	jsonnet --output-file $@ $<
 
+dist/gemini-cli/%.json: gemini-cli/%.jsonnet $(COMMON_SRCS) gemini-cli/theme.libsonnet
+	jsonnet --output-file $@ $<
+
 all: dist/ghostty/evolved-dark dist/ghostty/evolved-light
 all: dist/iterm2/evolved.itermcolors dist/iterm2/evolved-dark.itermcolors dist/iterm2/evolved-light.itermcolors dist/iterm2/evolved-dynamic.json
 all: dist/sublime-text/evolved-dark.sublime-color-scheme dist/sublime-text/evolved-light.sublime-color-scheme
 all: dist/vscode/evolved-dark-color-theme.json dist/vscode/evolved-light-color-theme.json
 all: dist/zed/themes/evolved.json
+all: dist/gemini-cli/evolved-dark.json dist/gemini-cli/evolved-light.json
 
 dist/iterm2/evolved-dynamic.json: iterm2/dynamic-profile.jsonnet ${COMMON_SRCS} iterm2/combined-theme.libsonnet iterm2/theme.libsonnet
 	jsonnet --output-file $@ $<

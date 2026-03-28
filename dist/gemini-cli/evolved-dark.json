@@ -1,0 +1,36 @@
+{
+   "background": {
+      "diff": {
+         "added": "#668050",
+         "removed": "#953a34"
+      },
+      "primary": "#2a2923"
+   },
+   "border": {
+      "default": "#2a2923",
+      "focused": "#9e6a12"
+   },
+   "name": "evolved dark",
+   "status": {
+      "error": "#ab5c56",
+      "success": "#84a16b",
+      "warning": "#e9a332"
+   },
+   "text": {
+      "accent": "#ffb843",
+      "link": "#e9a332",
+      "primary": "#aab6b2",
+      "secondary": "#909894"
+   },
+   "type": "custom",
+   "ui": {
+      "comment": "#5a5d58",
+      "gradient": [
+         "#ab5c56",
+         "#9e6a12",
+         "#267fae",
+         "#668050"
+      ],
+      "symbol": "#9fbf83"
+   }
+}
