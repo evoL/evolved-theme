@@ -1,19 +1,19 @@
 {
    "background": {
       "diff": {
-         "added": "#668050",
-         "removed": "#953a34"
+         "added": "#071600",
+         "removed": "#2f0000"
       },
       "primary": "#2a2923"
    },
    "border": {
       "default": "#2a2923",
-      "focused": "#9e6a12"
+      "focused": "#e9a332"
    },
    "name": "evolved dark",
    "status": {
-      "error": "#ab5c56",
-      "success": "#84a16b",
+      "error": "#c3827d",
+      "success": "#9fbf83",
       "warning": "#e9a332"
    },
    "text": {
@@ -26,10 +26,10 @@
    "ui": {
       "comment": "#5a5d58",
       "gradient": [
-         "#ab5c56",
-         "#9e6a12",
-         "#267fae",
-         "#668050"
+         "#c3827d",
+         "#ffb843",
+         "#58befa",
+         "#84a16b"
       ],
       "symbol": "#9fbf83"
    }

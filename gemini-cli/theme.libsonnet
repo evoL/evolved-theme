@@ -7,8 +7,8 @@
   background: {
     primary: d.bg.terminal,
     diff: {
-      added: d.bg.addedLine,
-      removed: d.bg.deletedLine,
+      added: d.bg.added,
+      removed: d.bg.deleted,
     },
   },
   text: {
@@ -19,21 +19,21 @@
   },
   border: {
     default: d.outline.ui,
-    focused: d.outline.active,
+    focused: d.fg.selection,
   },
   status: {
-    success: d.fg.ok,
-    warning: d.fg.warning,
-    ['error']: d.fg['error'],
+    success: d.text.ok,
+    warning: d.text.warning,
+    ['error']: d.text['error'],
   },
   ui: {
     comment: d.syntax.comment,
     symbol: d.syntax.operator,
     gradient: [
-      d.palette.e(500),
-      d.palette.v(500),
-      d.palette.o(500),
-      d.palette.l(500),
+      d.palette.e(600),
+      d.palette.v(800),
+      d.palette.o(700),
+      d.palette.l(600),
     ],
   },
 }
