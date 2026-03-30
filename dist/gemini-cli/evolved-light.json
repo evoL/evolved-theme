@@ -7,8 +7,7 @@
       "primary": "#ecfefc"
    },
    "border": {
-      "default": "#dff1ee",
-      "focused": "#e9a332"
+      "default": "#dff1ee"
    },
    "name": "evolved light",
    "status": {
@@ -24,7 +23,9 @@
    },
    "type": "custom",
    "ui": {
+      "active": "#36a0da",
       "comment": "#aab6b2",
+      "focus": "#e9a332",
       "gradient": [
          "#c3827d",
          "#ffb843",

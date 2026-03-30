@@ -7,8 +7,7 @@
       "primary": "#2a2923"
    },
    "border": {
-      "default": "#2a2923",
-      "focused": "#e9a332"
+      "default": "#2a2923"
    },
    "name": "evolved dark",
    "status": {
@@ -24,7 +23,9 @@
    },
    "type": "custom",
    "ui": {
+      "active": "#36a0da",
       "comment": "#5a5d58",
+      "focus": "#e9a332",
       "gradient": [
          "#c3827d",
          "#ffb843",

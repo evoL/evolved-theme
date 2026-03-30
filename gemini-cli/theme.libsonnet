@@ -19,7 +19,6 @@
   },
   border: {
     default: d.outline.ui,
-    focused: d.fg.selection,
   },
   status: {
     success: d.text.ok,
@@ -27,6 +26,9 @@
     ['error']: d.text['error'],
   },
   ui: {
+    // Primary foreground color for selected/focused values.
+    focus: d.fg.selection,
+    active: d.fg.info,
     comment: d.syntax.comment,
     symbol: d.syntax.operator,
     gradient: [
