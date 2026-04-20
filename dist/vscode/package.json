@@ -1,0 +1,33 @@
+{
+   "categories": [
+      "Themes"
+   ],
+   "contributes": {
+      "themes": [
+         {
+            "label": "evolved light",
+            "path": "./evolved-light-color-theme.json",
+            "uiTheme": "vs"
+         },
+         {
+            "label": "evolved dark",
+            "path": "./evolved-dark-color-theme.json",
+            "uiTheme": "vs-dark"
+         }
+      ]
+   },
+   "description": "evol's color theme",
+   "displayName": "evolved theme",
+   "engines": {
+      "vscode": "^1.80.0"
+   },
+   "icon": "./icon.png",
+   "license": "MIT",
+   "name": "evolved-theme",
+   "publisher": "evolved-systems",
+   "repository": {
+      "type": "git",
+      "url": "https://github.com/evoL/evolved-theme"
+   },
+   "version": "0.3.0"
+}

@@ -33,6 +33,15 @@ all: dist/zed/themes/evolved.json
 dist/iterm2/evolved-dynamic.json: iterm2/dynamic-profile.jsonnet ${COMMON_SRCS} iterm2/combined-theme.libsonnet iterm2/theme.libsonnet
 	jsonnet --output-file $@ $<
 
+dist/vscode/icon.png: icon.png
+	cp -f $< $@
+
+dist/vscode/LICENSE: LICENSE
+	cp -f $< $@
+
+dist/vscode/package.json: vscode/package.jsonnet
+	jsonnet --ext-str version=${VERSION} --output-file $@ $<
+
 # Release assets
 
 release: dist/ghostty.zip dist/iterm2.zip dist/evolved-theme.sublime-package dist/evolved-theme.vsix dist/zed.zip
@@ -46,8 +55,8 @@ dist/iterm2.zip: dist/iterm2/evolved.itermcolors dist/iterm2/evolved-dark.itermc
 dist/evolved-theme.sublime-package: dist/sublime-text/evolved-dark.sublime-color-scheme dist/sublime-text/evolved-light.sublime-color-scheme
 	zip -j $@ $^
 
-dist/evolved-theme.vsix: dist/vscode/evolved-dark-color-theme.json dist/vscode/evolved-light-color-theme.json
-	vsce package --out $@
+dist/evolved-theme.vsix: dist/vscode/evolved-dark-color-theme.json dist/vscode/evolved-light-color-theme.json dist/vscode/LICENSE dist/vscode/package.json dist/vscode/icon.png
+	cd dist/vscode && vsce package --out ../../$@
 
 dist/zed.zip: dist/zed/themes/evolved.json
 	cd dist/zed && zip -r ../zed.zip .

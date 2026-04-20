@@ -9,7 +9,7 @@
     "type": "git",
     "url": "https://github.com/evoL/evolved-theme"
   },
-  "version": "0.3.0",
+  "version": std.extVar("version"),
   "engines": {
     "vscode": "^1.80.0"
   },
@@ -21,12 +21,12 @@
       {
         "label": "evolved light",
         "uiTheme": "vs",
-        "path": "./dist/vscode/evolved-light-color-theme.json"
+        "path": "./evolved-light-color-theme.json"
       },
       {
         "label": "evolved dark",
         "uiTheme": "vs-dark",
-        "path": "./dist/vscode/evolved-dark-color-theme.json"
+        "path": "./evolved-dark-color-theme.json"
       }
     ]
   }
