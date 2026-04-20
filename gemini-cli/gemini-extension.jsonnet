@@ -2,7 +2,7 @@ local colors = import '../lib/colors.libsonnet';
 local theme = import './theme.libsonnet';
 
 {
-  name: 'evolved theme',
+  name: 'evolved-theme',
   version: std.extVar('version'),
   themes: [
     theme {
