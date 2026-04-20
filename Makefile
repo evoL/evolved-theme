@@ -2,10 +2,11 @@
 
 # Regular build
 
+VERSION = 0.3.0
 COMMON_SRCS = lib/colors.libsonnet lib/huetone.libsonnet
 
 dist/gemini-cli/%.json: gemini-cli/%.jsonnet $(COMMON_SRCS) gemini-cli/theme.libsonnet
-	jsonnet --output-file $@ $<
+	jsonnet --ext-str version=${VERSION} --output-file $@ $<
 
 dist/ghostty/%: ghostty/%.jsonnet ${COMMON_SRCS} ghostty/config.libsonnet ghostty/theme.libsonnet
 	jsonnet --string --output-file $@ $<
@@ -22,7 +23,7 @@ dist/vscode/%-color-theme.json: vscode/%.jsonnet $(COMMON_SRCS) lib/textmate.lib
 dist/zed/themes/%.json: zed/%.jsonnet $(COMMON_SRCS) lib/textmate.libsonnet zed/theme.libsonnet
 	jsonnet --output-file $@ $<
 
-all: dist/gemini-cli/evolved-dark.json dist/gemini-cli/evolved-light.json
+all: dist/gemini-cli/gemini-extension.json
 all: dist/ghostty/evolved-dark dist/ghostty/evolved-light
 all: dist/iterm2/evolved.itermcolors dist/iterm2/evolved-dark.itermcolors dist/iterm2/evolved-light.itermcolors dist/iterm2/evolved-dynamic.json
 all: dist/sublime-text/evolved-dark.sublime-color-scheme dist/sublime-text/evolved-light.sublime-color-scheme
